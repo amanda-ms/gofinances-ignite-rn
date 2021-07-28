@@ -1,20 +1,35 @@
-import React from 'react'
-import { Text, StyleSheet } from 'react-native'
+import React from "react";
+import {
+  Container,
+  Header,
+  UserWrapper,
+  UserInfo,
+  Photo,
+  User,
+  UserGreeting,
+  UserName,
+  Icon,
+} from "./styles";
 
-import {Container, Title} from './styles'
-
-export function Dashboard(){
-  return(
-    <Container style={ styles.container}>
-      <Title>Dashboard</Title>
+export function Dashboard() {
+  return (
+    <Container>
+      <Header>
+        <UserWrapper>
+          <UserInfo>
+            <Photo
+              source={{
+                uri: "https://avatars.githubusercontent.com/u/59808416?v=4",
+              }}
+            />
+            <User>
+              <UserGreeting>Olá,</UserGreeting>
+              <UserName>Amanda</UserName>
+            </User>
+          </UserInfo>
+          <Icon name="power" />
+        </UserWrapper>
+      </Header>
     </Container>
-  )
+  );
 }
-
-const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-})
