@@ -6,7 +6,7 @@ import {Container, Title} from './styles'
 export function Dashboard(){
   return(
     <Container style={ styles.container}>
-      <Title>Hello</Title>
+      <Title>Dashboard</Title>
     </Container>
   )
 }
